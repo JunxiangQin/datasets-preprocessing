@@ -1,0 +1,14 @@
+# Paths are relative to this config file, not the working directory.
+input_path = "../examples/sample.jsonl"
+output_dir = "../data/processed/demo"
+seed = 42
+
+[split]
+name = "random"
+ratios = [0.8, 0.1, 0.1] # train, validation, test
+
+[channel]
+name = "identity" # Pass-through; no noise or fading is applied.
+
+[channel.parameters]
+# Future channel implementations can accept snr_db, sample_rate, etc. here.
